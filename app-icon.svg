@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Home-screen icon: a gauge whose needle is a wrench. Full-bleed square (phones round the corners); everything
+       sits inside the central 80% circle so Android's maskable crop keeps it whole. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c3b5e"/>
+      <stop offset="1" stop-color="#18213a"/>
+    </linearGradient>
+    <mask id="jaw">
+      <rect x="-60" y="-200" width="120" height="240" fill="#fff"/>
+      <rect x="-15" y="-160" width="30" height="60" rx="15" fill="#000"/>
+    </mask>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <!-- Gauge: dim track over 270 degrees, white reading up to the needle. Center (256, 280), radius 168. -->
+  <path d="M137.21 398.79 A168 168 0 1 1 374.79 398.79" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="30" stroke-linecap="round"/>
+  <path d="M137.21 398.79 A168 168 0 0 1 363.99 151.31" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round"/>
+  <!-- Wrench needle, pointing at the end of the white arc. -->
+  <g transform="translate(256 280) rotate(40)" fill="#ffd166">
+    <g mask="url(#jaw)">
+      <rect x="-19" y="-96" width="38" height="114" rx="19"/>
+      <circle cy="-100" r="42"/>
+    </g>
+    <circle r="32"/>
+    <circle r="11" fill="#1f2a44"/>
+  </g>
+</svg>
